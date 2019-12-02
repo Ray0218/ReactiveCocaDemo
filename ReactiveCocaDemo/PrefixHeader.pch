@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  ReactiveCocaDemo
+//
+//  Created by 吴孔亮 on 2019/1/15.
+//  Copyright © 2019年 Ray. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <Masonry.h>
+#import <AFNetworking.h>
+
+
+
+#import "AFHTTPSessionManager+PSManager.h"
+
+#endif /* PrefixHeader_pch */
