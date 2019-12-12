@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,strong) RACCommand *orderCreatCommand;
 
+/// 测试
 -(void)test_normal ;
 
 @end

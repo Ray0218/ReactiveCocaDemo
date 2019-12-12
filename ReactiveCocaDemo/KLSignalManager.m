@@ -7,7 +7,7 @@
 //
 
 #import "KLSignalManager.h"
-
+ 
 @implementation KLSignalManager
 
 static KLSignalManager *_manager = nil ;
@@ -16,6 +16,8 @@ static KLSignalManager *_manager = nil ;
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        
+ 
         _manager = [[super allocWithZone:NULL]init];
     });
     return _manager ;
@@ -202,7 +204,7 @@ static KLSignalManager *_manager = nil ;
     //4.执行命令
     //    [self.command execute:nil];
     
-   RACSignal *comSignal = [command execute:@"开始"];
+   RACSignal *comSignal = [command execute:@"输入内容"];
     
     [comSignal subscribeNext:^(id  _Nullable x) {
         
@@ -588,8 +590,24 @@ static KLSignalManager *_manager = nil ;
       
       ]subscribeNext:^(id  _Nullable x) {
         NSLog(@"takeUntil == %@",x);
-    }] ;
+    }]  ;
     //当rSecondSignal中的条件满足后,将不再接受到信号
+    
+    
+    [[self.rSecondSignal takeUntil:[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+             [subscriber sendNext:@"dddd"] ;
+
+        });
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"disposableWithBlock");
+        }];
+    }]]subscribeNext:^(id  _Nullable x) {
+        
+        NSLog(@"接收 %@",x);
+    }] ;
     
 }
 
@@ -913,7 +931,8 @@ static KLSignalManager *_manager = nil ;
     //    }];
     // 4.代替通知
     // 把监听到的通知转换信号
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification object:nil] subscribeNext:^(id x) {
+    [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification object:nil]takeUntil:self.rac_willDeallocSignal]
+     subscribeNext:^(id x) {
         NSLog(@"键盘弹出");
     }];
     // 5.监听文本框的文字改变
@@ -927,7 +946,6 @@ static KLSignalManager *_manager = nil ;
 - (void)updateUIWithR1:(id)data r2:(id)data1
 {
     NSLog(@"更新UI%@  %@",data,data1);
-    
     
 }
 
@@ -1004,7 +1022,7 @@ static KLSignalManager *_manager = nil ;
     // 1.遍历数组
     NSArray *numbers = @[@1,@2,@3,@4];
     [numbers.rac_sequence.signal subscribeNext:^(id x) {
-        NSLog(@"%@",x);
+        NSLog(@"## %@",x);
     }];
     
     RACSequence *rSquence =  [numbers.rac_sequence map:^id _Nullable(id  _Nullable value) {
@@ -1013,9 +1031,14 @@ static KLSignalManager *_manager = nil ;
     }];
     
     NSArray *newNums =   [rSquence array];
-    NSLog(@"%@",newNums);
+    NSLog(@"#### %@",newNums);
     
+    NSArray *ss =  [[numbers.rac_sequence flattenMap:^__kindof RACSequence * _Nullable(id  _Nullable value) {
+        return [RACSequence return: value];
+    }] array];
     
+    NSLog(@"ss =  %@",ss);
+
     
     // 2.遍历字典,遍历出来的键值对会包装成RACTuple(元组对象)
     NSDictionary *dict = @{@"name":@"xiaoming",@"age":@18};
@@ -1030,7 +1053,7 @@ static KLSignalManager *_manager = nil ;
         RACTupleUnpack(NSString *key,NSString *value) = x;
         // 解包元组，会把元组的值，按顺序给参数里面的变量赋值
         
-        NSLog(@"%@ %@",key,value);
+        NSLog(@"的订单= %@ %@",key,value);
         
     }] ;
     

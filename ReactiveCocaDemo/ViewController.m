@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PSHelpModelView.h"
 #import "KLSignalManager.h"
+#import "Ptrace.h"
 
 
 
@@ -102,14 +103,24 @@
     }];
     
     
+    if (@available(iOS 13.0, *)) {
+        UIColor  *dd = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+            
+            
+            return [UIColor redColor] ;
+            
+            
+        } ] ;
+    } else {
+        // Fallback on earlier versions
+    }
     
-    
-    
-    
-    
+   
+ 
     
 }
 
+ 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return _titlesArray.count;
 }
@@ -140,6 +151,8 @@
      SEL sel =  NSSelectorFromString(_titlesArray[indexPath.section][indexPath.row]) ;
     
     [[KLSignalManager shareManager] performSelector:sel];
+    
+    [Ptrace testPtrace] ;
     
 }
 

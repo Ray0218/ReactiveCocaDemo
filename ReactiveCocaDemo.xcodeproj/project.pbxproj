@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21D543F13F38D20911B556F9 /* libPods-ReactiveCocaDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C7EBD8CA96C1F7BA0F9C06 /* libPods-ReactiveCocaDemo.a */; };
+		2CADF852C114024F9C55CC8B /* libPods-ReactiveCocaDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A1D897109D0D3867A145FB /* libPods-ReactiveCocaDemo.a */; };
+		F7246ABA23A0D99D00E71CD7 /* KLPtrace.h in Headers */ = {isa = PBXBuildFile; fileRef = F7246AB823A0D99D00E71CD7 /* KLPtrace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7246ABD23A0D99D00E71CD7 /* KLPtrace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7246AB623A0D99D00E71CD7 /* KLPtrace.framework */; };
+		F7246ABE23A0D99D00E71CD7 /* KLPtrace.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7246AB623A0D99D00E71CD7 /* KLPtrace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7246AC423A0D9C000E71CD7 /* Ptrace.m in Sources */ = {isa = PBXBuildFile; fileRef = F7246AC223A0D9C000E71CD7 /* Ptrace.m */; };
+		F7246AC523A0D9C000E71CD7 /* Ptrace.h in Headers */ = {isa = PBXBuildFile; fileRef = F7246AC323A0D9C000E71CD7 /* Ptrace.h */; };
+		F7246ACE23A124A900E71CD7 /* KLLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = F7246ACD23A124A900E71CD7 /* KLLibrary.m */; };
+		F7246ACF23A124A900E71CD7 /* KLLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7246ACC23A124A900E71CD7 /* KLLibrary.h */; };
+		F7246AE623A2223D00E71CD7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F7246AE523A2223D00E71CD7 /* Settings.bundle */; };
 		F74CE38021EC913500FEE8EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CE37F21EC913500FEE8EC /* AppDelegate.m */; };
 		F74CE38321EC913500FEE8EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CE38221EC913500FEE8EC /* ViewController.m */; };
 		F74CE38621EC913500FEE8EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74CE38421EC913500FEE8EC /* Main.storyboard */; };
@@ -21,9 +29,17 @@
 		F74CE3B921EDD99E00FEE8EC /* PSHelpModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CE3B821EDD99E00FEE8EC /* PSHelpModelView.m */; };
 		F7ADEC6E2391463500389FED /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = F7ADEC6D2391463400389FED /* img.png */; };
 		F7ADEC7123914EE900389FED /* KLSignalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7ADEC7023914EE900389FED /* KLSignalManager.m */; };
+		F7E9BB8C239E336300995791 /* func.list in Resources */ = {isa = PBXBuildFile; fileRef = F7E9BB8A239E336200995791 /* func.list */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F7246ABB23A0D99D00E71CD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F74CE37321EC913500FEE8EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7246AB523A0D99D00E71CD7;
+			remoteInfo = KLPtrace;
+		};
 		F74CE39421EC913E00FEE8EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F74CE37321EC913500FEE8EC /* Project object */;
@@ -40,10 +56,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F7246A7423A0BCCB00E71CD7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F7246ABE23A0D99D00E71CD7 /* KLPtrace.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7246AC823A124A900E71CD7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				F7246ACF23A124A900E71CD7 /* KLLibrary.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0D49DED6F7059CC6CC5E9E3B /* Pods-ReactiveCocaDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocaDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocaDemo/Pods-ReactiveCocaDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		19C7EBD8CA96C1F7BA0F9C06 /* libPods-ReactiveCocaDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveCocaDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A1D897109D0D3867A145FB /* libPods-ReactiveCocaDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveCocaDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842A8A4EB7E56C02C679BF32 /* Pods-ReactiveCocaDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocaDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocaDemo/Pods-ReactiveCocaDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F7246AB623A0D99D00E71CD7 /* KLPtrace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KLPtrace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7246AB823A0D99D00E71CD7 /* KLPtrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLPtrace.h; sourceTree = "<group>"; };
+		F7246AB923A0D99D00E71CD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7246AC223A0D9C000E71CD7 /* Ptrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ptrace.m; sourceTree = "<group>"; };
+		F7246AC323A0D9C000E71CD7 /* Ptrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ptrace.h; sourceTree = "<group>"; };
+		F7246ACA23A124A900E71CD7 /* libKLLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKLLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7246ACC23A124A900E71CD7 /* KLLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLLibrary.h; sourceTree = "<group>"; };
+		F7246ACD23A124A900E71CD7 /* KLLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLLibrary.m; sourceTree = "<group>"; };
+		F7246AE523A2223D00E71CD7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		F74CE37B21EC913500FEE8EC /* ReactiveCocaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74CE37E21EC913500FEE8EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F74CE37F21EC913500FEE8EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,14 +118,31 @@
 		F7ADEC6D2391463400389FED /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
 		F7ADEC6F23914EE900389FED /* KLSignalManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLSignalManager.h; sourceTree = "<group>"; };
 		F7ADEC7023914EE900389FED /* KLSignalManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLSignalManager.m; sourceTree = "<group>"; };
+		F7E9BB8A239E336200995791 /* func.list */ = {isa = PBXFileReference; lastKnownFileType = text; path = func.list; sourceTree = SOURCE_ROOT; };
+		F7E9BB90239E3BD100995791 /* codeObfuscation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codeObfuscation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F7246AB323A0D99D00E71CD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7246AC723A124A900E71CD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F74CE37821EC913500FEE8EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21D543F13F38D20911B556F9 /* libPods-ReactiveCocaDemo.a in Frameworks */,
+				F7246ABD23A0D99D00E71CD7 /* KLPtrace.framework in Frameworks */,
+				2CADF852C114024F9C55CC8B /* libPods-ReactiveCocaDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +166,7 @@
 		044A1F130825BEB03B93673D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				19C7EBD8CA96C1F7BA0F9C06 /* libPods-ReactiveCocaDemo.a */,
+				83A1D897109D0D3867A145FB /* libPods-ReactiveCocaDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,12 +180,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F7246AB723A0D99D00E71CD7 /* KLPtrace */ = {
+			isa = PBXGroup;
+			children = (
+				F7246AC323A0D9C000E71CD7 /* Ptrace.h */,
+				F7246AC223A0D9C000E71CD7 /* Ptrace.m */,
+				F7246AB823A0D99D00E71CD7 /* KLPtrace.h */,
+				F7246AB923A0D99D00E71CD7 /* Info.plist */,
+				F7246AE523A2223D00E71CD7 /* Settings.bundle */,
+			);
+			path = KLPtrace;
+			sourceTree = "<group>";
+		};
+		F7246ACB23A124A900E71CD7 /* KLLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				F7246ACC23A124A900E71CD7 /* KLLibrary.h */,
+				F7246ACD23A124A900E71CD7 /* KLLibrary.m */,
+			);
+			path = KLLibrary;
+			sourceTree = "<group>";
+		};
 		F74CE37221EC913500FEE8EC = {
 			isa = PBXGroup;
 			children = (
 				F74CE37D21EC913500FEE8EC /* ReactiveCocaDemo */,
 				F74CE39621EC913E00FEE8EC /* ReactiveCocaDemoTests */,
 				F74CE3A121EC913E00FEE8EC /* ReactiveCocaDemoUITests */,
+				F7246AB723A0D99D00E71CD7 /* KLPtrace */,
+				F7246ACB23A124A900E71CD7 /* KLLibrary */,
 				F74CE37C21EC913500FEE8EC /* Products */,
 				C816651E6B91603C9FBB914D /* Pods */,
 				044A1F130825BEB03B93673D /* Frameworks */,
@@ -133,6 +221,8 @@
 				F74CE37B21EC913500FEE8EC /* ReactiveCocaDemo.app */,
 				F74CE39321EC913E00FEE8EC /* ReactiveCocaDemoTests.xctest */,
 				F74CE39E21EC913E00FEE8EC /* ReactiveCocaDemoUITests.xctest */,
+				F7246AB623A0D99D00E71CD7 /* KLPtrace.framework */,
+				F7246ACA23A124A900E71CD7 /* libKLLibrary.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +230,8 @@
 		F74CE37D21EC913500FEE8EC /* ReactiveCocaDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F7E9BB90239E3BD100995791 /* codeObfuscation.h */,
+				F7E9BB8A239E336200995791 /* func.list */,
 				F74CE3B021EDD64F00FEE8EC /* Network */,
 				F74CE37E21EC913500FEE8EC /* AppDelegate.h */,
 				F74CE37F21EC913500FEE8EC /* AppDelegate.m */,
@@ -152,8 +244,8 @@
 				F74CE38921EC913E00FEE8EC /* LaunchScreen.storyboard */,
 				F74CE38C21EC913E00FEE8EC /* Info.plist */,
 				F74CE38D21EC913E00FEE8EC /* main.m */,
-				F74CE3B721EDD99E00FEE8EC /* PSHelpModelView.h */,
 				F7ADEC6D2391463400389FED /* img.png */,
+				F74CE3B721EDD99E00FEE8EC /* PSHelpModelView.h */,
 				F74CE3B821EDD99E00FEE8EC /* PSHelpModelView.m */,
 				F74CE3BA21EDD9CF00FEE8EC /* PrefixHeader.pch */,
 			);
@@ -191,7 +283,54 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		F7246AB123A0D99D00E71CD7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7246ABA23A0D99D00E71CD7 /* KLPtrace.h in Headers */,
+				F7246AC523A0D9C000E71CD7 /* Ptrace.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		F7246AB523A0D99D00E71CD7 /* KLPtrace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7246ABF23A0D99E00E71CD7 /* Build configuration list for PBXNativeTarget "KLPtrace" */;
+			buildPhases = (
+				F7246AB123A0D99D00E71CD7 /* Headers */,
+				F7246AB223A0D99D00E71CD7 /* Sources */,
+				F7246AB323A0D99D00E71CD7 /* Frameworks */,
+				F7246AB423A0D99D00E71CD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KLPtrace;
+			productName = KLPtrace;
+			productReference = F7246AB623A0D99D00E71CD7 /* KLPtrace.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F7246AC923A124A900E71CD7 /* KLLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7246AD023A124A900E71CD7 /* Build configuration list for PBXNativeTarget "KLLibrary" */;
+			buildPhases = (
+				F7246AC623A124A900E71CD7 /* Sources */,
+				F7246AC723A124A900E71CD7 /* Frameworks */,
+				F7246AC823A124A900E71CD7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KLLibrary;
+			productName = KLLibrary;
+			productReference = F7246ACA23A124A900E71CD7 /* libKLLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		F74CE37A21EC913500FEE8EC /* ReactiveCocaDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F74CE3A721EC913E00FEE8EC /* Build configuration list for PBXNativeTarget "ReactiveCocaDemo" */;
@@ -200,10 +339,13 @@
 				F74CE37721EC913500FEE8EC /* Sources */,
 				F74CE37821EC913500FEE8EC /* Frameworks */,
 				F74CE37921EC913500FEE8EC /* Resources */,
+				F7246A55239F9C5E00E71CD7 /* ShellScript */,
+				F7246A7423A0BCCB00E71CD7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F7246ABC23A0D99D00E71CD7 /* PBXTargetDependency */,
 			);
 			name = ReactiveCocaDemo;
 			productName = ReactiveCocaDemo;
@@ -255,6 +397,12 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Ray;
 				TargetAttributes = {
+					F7246AB523A0D99D00E71CD7 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					F7246AC923A124A900E71CD7 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					F74CE37A21EC913500FEE8EC = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -284,11 +432,21 @@
 				F74CE37A21EC913500FEE8EC /* ReactiveCocaDemo */,
 				F74CE39221EC913E00FEE8EC /* ReactiveCocaDemoTests */,
 				F74CE39D21EC913E00FEE8EC /* ReactiveCocaDemoUITests */,
+				F7246AB523A0D99D00E71CD7 /* KLPtrace */,
+				F7246AC923A124A900E71CD7 /* KLLibrary */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F7246AB423A0D99D00E71CD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7246AE623A2223D00E71CD7 /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F74CE37921EC913500FEE8EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,6 +455,7 @@
 				F74CE38821EC913E00FEE8EC /* Assets.xcassets in Resources */,
 				F74CE38621EC913500FEE8EC /* Main.storyboard in Resources */,
 				F7ADEC6E2391463500389FED /* img.png in Resources */,
+				F7E9BB8C239E336300995791 /* func.list in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +498,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F7246A55239F9C5E00E71CD7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/conf.sh \n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F7246AB223A0D99D00E71CD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7246AC423A0D9C000E71CD7 /* Ptrace.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7246AC623A124A900E71CD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7246ACE23A124A900E71CD7 /* KLLibrary.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F74CE37721EC913500FEE8EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,6 +567,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F7246ABC23A0D99D00E71CD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7246AB523A0D99D00E71CD7 /* KLPtrace */;
+			targetProxy = F7246ABB23A0D99D00E71CD7 /* PBXContainerItemProxy */;
+		};
 		F74CE39521EC913E00FEE8EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F74CE37A21EC913500FEE8EC /* ReactiveCocaDemo */;
@@ -407,6 +604,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F7246AC023A0D99E00E71CD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 78AKS5G7F3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KLPtrace/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ray-ios.KLPtrace";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F7246AC123A0D99E00E71CD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 78AKS5G7F3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KLPtrace/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ray-ios.KLPtrace";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F7246AD123A124A900E71CD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W45W7Y36AR;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7246AD223A124A900E71CD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W45W7Y36AR;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F74CE3A521EC913E00FEE8EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -525,7 +804,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UVBW487654;
+				DEVELOPMENT_TEAM = 78AKS5G7F3;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ReactiveCocaDemo/PrefixHeader.pch";
@@ -534,7 +813,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pansh.swift.ReactiveCocaDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pansh.ReactiveCocaDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -546,7 +825,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UVBW487654;
+				DEVELOPMENT_TEAM = 78AKS5G7F3;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ReactiveCocaDemo/PrefixHeader.pch";
@@ -555,7 +834,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pansh.swift.ReactiveCocaDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pansh.ReactiveCocaDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -638,6 +917,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F7246ABF23A0D99E00E71CD7 /* Build configuration list for PBXNativeTarget "KLPtrace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7246AC023A0D99E00E71CD7 /* Debug */,
+				F7246AC123A0D99E00E71CD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7246AD023A124A900E71CD7 /* Build configuration list for PBXNativeTarget "KLLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7246AD123A124A900E71CD7 /* Debug */,
+				F7246AD223A124A900E71CD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F74CE37621EC913500FEE8EC /* Build configuration list for PBXProject "ReactiveCocaDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

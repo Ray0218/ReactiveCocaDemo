@@ -8,6 +8,11 @@
 
 #import "PSHelpModelView.h"
 
+@interface PSHelpModelView ()
+@property(nonatomic,strong,getter=rLastName) NSString *rName;
+
+@end
+
 @implementation PSHelpModelView
 
 
